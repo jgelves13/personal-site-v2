@@ -82,21 +82,10 @@ Extract the following data and return ONLY valid JSON with this exact schema:
       "desc_es": "descripción en español"
     }
   ],
-  "education": [
-    {
-      "institution": "University name",
-      "degree_en": "Degree · Minor etc",
-      "degree_es": "Título en español",
-      "dates": "Year – Year",
-      "award_en": "Scholarship name and description (or empty string)",
-      "award_es": "Beca en español (o cadena vacía)"
-    }
-  ]
 }
 
 Rules:
 - experience: list the 4 most recent roles only, most recent first
-- education: list all, most recent first
 - Keep descriptions concise but specific (mention key outputs, numbers, methods)
 - dates: use abbreviated month format: Jan. Feb. Mar. Apr. May Jun. Jul. Aug. Sep. Oct. Nov. Dec.
 - Do NOT wrap in markdown code fences — return raw JSON only
@@ -209,42 +198,6 @@ def update_html(data: dict):
     # remove extra items if CV now has fewer entries
     for item in existing_items[len(new_exp):]:
         item.decompose()
-        changes += 1
-
-    # ── education items ──
-    edu_section   = soup.find("section", id="education")
-    edu_right     = edu_section.select_one(".section-right")
-    existing_edu  = edu_right.select("div.exp-item")
-    new_edu = data.get("education", [])
-
-    for i, edu in enumerate(new_edu):
-        if i < len(existing_edu):
-            item = existing_edu[i]
-        else:
-            item = soup.new_tag("div", **{"class": "exp-item reveal"})
-            edu_right.append(item)
-            existing_edu.append(item)
-
-        role_el = item.select_one("h3.exp-role") or item.select_one(".exp-role")
-        if role_el:
-            role_el.string = edu["institution"]
-
-        date_el = item.select_one("span.exp-date")
-        if date_el:
-            date_el.string = edu["dates"]
-
-        org_el = item.select_one("p.exp-org")
-        if org_el:
-            org_el["data-en"] = edu["degree_en"]
-            org_el["data-es"] = edu["degree_es"]
-            org_el.string = edu["degree_en"]
-
-        desc_el = item.select_one("p.exp-desc")
-        if desc_el and (edu.get("award_en") or edu.get("award_es")):
-            desc_el["data-en"] = edu["award_en"]
-            desc_el["data-es"] = edu["award_es"]
-            desc_el.string = edu["award_en"]
-
         changes += 1
 
     # write back
