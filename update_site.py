@@ -63,26 +63,26 @@ PROMPT = """\
 You are given the text of two CVs (EN and ES) for Jose Gelves Cabrera.
 Extract the following data and return ONLY valid JSON with this exact schema:
 
-{
-  "about": {
+{{
+  "about": {{
     "p1_en": "first about paragraph in English (2-3 sentences, background + focus)",
     "p1_es": "primer párrafo en español",
     "p2_en": "second about paragraph in English (recent work highlights)",
     "p2_es": "segundo párrafo en español",
     "p3_en": "third about paragraph in English (building with AI agents)",
     "p3_es": "tercer párrafo en español"
-  },
+  }},
   "experience": [
-    {
+    {{
       "role_en": "Job title in English",
       "role_es": "Título en español",
       "org": "Organization name",
       "dates": "Month. Year – Month. Year  (e.g. Apr. 2025 – Present)",
       "desc_en": "1-2 sentence description in English",
       "desc_es": "descripción en español"
-    }
-  ],
-}
+    }}
+  ]
+}}
 
 Rules:
 - experience: list the 4 most recent roles only, most recent first
