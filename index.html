@@ -3,12 +3,34 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jose Gelves — Political Scientist · AI Safety · Builder</title>
-  <meta name="description" content="Jose Gelves Cabrera — Political Scientist, AI Safety researcher, and builder based in Bogotá."/>
+  <title>Jose Gelves — Political Scientist · AI Governance · Builder</title>
+  <meta name="description" content="Jose Gelves — Political scientist, AI governance researcher, and builder based in Bogotá."/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+
+  <!-- OG / Social -->
+  <meta property="og:title" content="Jose Gelves"/>
+  <meta property="og:description" content="Political scientist, AI governance researcher, and builder based in Bogotá."/>
+  <meta property="og:image" content="assets/jose.webp"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Raleway:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css"/>
+
+  <!-- Google Analytics — replace GA_MEASUREMENT_ID with your G-XXXXXXXXXX id -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
 </head>
 <body>
 
@@ -49,6 +71,7 @@
       <span class="label"> jose_gelves </span>
       <span class="bracket">}</span>
     </div>
+    <p class="hero-tagline" data-en="AI governance · digital policy · builder" data-es="gobernanza de IA · política digital · builder">AI governance · digital policy · builder</p>
 
     <div class="orbiter" style="animation-delay:0s">
       <div class="orb-icon">🏛️</div><span class="orb-label">Governance</span>
@@ -82,6 +105,7 @@
   <div class="section-inner">
     <div class="section-left">
       <h2 class="section-heading reveal" data-en="About" data-es="Sobre mí">About</h2>
+      <img src="assets/jose.webp" alt="Jose Gelves" class="about-photo reveal"/>
     </div>
     <div class="section-right">
       <p class="body-text reveal"
@@ -116,6 +140,8 @@
            data-cv-en="assets/CV Jose Gelves (EN).pdf" data-cv-es="assets/CV Jose Gelves (ES).pdf">Download CV →</a>
         <a href="https://linkedin.com/in/josegelves" target="_blank" rel="noopener" class="text-link">LinkedIn ↗</a>
         <a href="https://github.com/jgelves13" target="_blank" rel="noopener" class="text-link">GitHub ↗</a>
+        <a href="mailto:josegelves12@gmail.com" class="text-link"
+           data-en="Email →" data-es="Correo →">Email →</a>
       </div>
     </div>
   </div>
@@ -187,7 +213,6 @@
         </p>
       </div>
 
-
     </div>
   </div>
 </section>
@@ -239,7 +264,7 @@
     <div class="footer-links">
       <a href="https://linkedin.com/in/josegelves" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a href="https://github.com/jgelves13" target="_blank" rel="noopener">GitHub ↗</a>
-      <a href="mailto:j.gelves@uniandes.edu.co">j.gelves@uniandes.edu.co</a>
+      <a href="mailto:josegelves12@gmail.com">josegelves12@gmail.com</a>
       <a id="cvDownloadFooter" href="assets/CV Jose Gelves (EN).pdf" target="_blank"
          data-en="Download CV →" data-es="Descargar CV →"
          data-cv-en="assets/CV Jose Gelves (EN).pdf" data-cv-es="assets/CV Jose Gelves (ES).pdf">Download CV →</a>
@@ -247,6 +272,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>

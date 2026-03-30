@@ -220,6 +220,33 @@ nav a:hover::after { width: 100%; }
   100% { transform: rotate(360deg) translate(min(42vw, 240px), 0) scaleY(0.55) rotate(-360deg) scaleY(1.82) scale(0.7);  z-index: 1;  filter: brightness(0.65); }
 }
 
+/* ===== HERO TAGLINE ===== */
+.hero-tagline {
+  position: absolute;
+  top: calc(50% + 2.4rem);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(0.75rem, 1.8vw, 0.95rem);
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ===== ABOUT PHOTO ===== */
+.about-photo {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 2rem;
+  display: block;
+}
+
 /* ===== SECTIONS — 2-COL LAYOUT ===== */
 .section {
   padding: 5rem 3rem;
@@ -449,6 +476,7 @@ footer {
   .section { padding: 3.5rem 1.5rem; }
   .section-inner { grid-template-columns: 1fr; gap: 1.5rem; }
   .section-left { position: static; }
+  .about-photo { max-width: 120px; margin-top: 1rem; }
   .section-heading { font-size: 2rem; }
 
   .divider { width: calc(100% - 3rem); }
