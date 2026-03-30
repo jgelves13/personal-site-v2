@@ -21,7 +21,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install pdfplumber google-generativeai beautifulsoup4 lxml requests
+        run: pip install pdfplumber google-genai beautifulsoup4 lxml requests
 
       - name: Download CVs from Overleaf
         env:
