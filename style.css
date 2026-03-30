@@ -220,22 +220,6 @@ nav a:hover::after { width: 100%; }
   100% { transform: rotate(360deg) translate(min(42vw, 240px), 0) scaleY(0.55) rotate(-360deg) scaleY(1.82) scale(0.7);  z-index: 1;  filter: brightness(0.65); }
 }
 
-/* ===== HERO TAGLINE ===== */
-.hero-tagline {
-  position: absolute;
-  top: calc(50% + 2.4rem);
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Raleway', sans-serif;
-  font-size: clamp(0.75rem, 1.8vw, 0.95rem);
-  font-weight: 500;
-  color: var(--muted);
-  white-space: nowrap;
-  letter-spacing: 0.04em;
-  pointer-events: none;
-  user-select: none;
-}
-
 /* ===== ABOUT PHOTO ===== */
 .about-photo {
   width: 100%;
