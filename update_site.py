@@ -104,15 +104,23 @@ def extract_data(en_text: str, es_text: str) -> dict:
 
     client = genai.Client(api_key=api_key)
     print("Calling Gemini API to parse CV data...")
-    response = client.models.generate_content(
-        model="gemini-2.5-pro",
-        contents=PROMPT.format(en_text=en_text[:12000], es_text=es_text[:12000]),
-    )
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents=PROMPT.format(en_text=en_text[:12000], es_text=es_text[:12000]),
+        )
+    except Exception as e:
+        sys.exit(f"ERROR: Gemini API call failed: {e}")
     raw = response.text.strip()
     # strip markdown fences if present
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
-    return json.loads(raw)
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError as e:
+        print(f"ERROR: JSON parse failed: {e}")
+        print(f"Raw response (first 500 chars): {raw[:500]}")
+        sys.exit(1)
 
 def _load_dotenv_key():
     env = BASE / ".env"
