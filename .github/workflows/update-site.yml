@@ -1,0 +1,44 @@
+name: Update site from CV
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'   # every Monday at 10:00 UTC
+  workflow_dispatch:         # also allows manual trigger from GitHub UI
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install pdfplumber anthropic beautifulsoup4 lxml requests
+
+      - name: Download CVs from Overleaf
+        env:
+          OVERLEAF_SESSION: ${{ secrets.OVERLEAF_SESSION }}
+        run: python download_overleaf.py
+
+      - name: Update site HTML from CVs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python update_site.py --no-dl
+
+      - name: Commit and push if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/ index.html
+          git diff --staged --quiet && echo "No changes." || (
+            git commit -m "chore: auto-update site from CV" &&
+            git push
+          )

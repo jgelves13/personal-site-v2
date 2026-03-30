@@ -95,7 +95,7 @@ Extract the following data and return ONLY valid JSON with this exact schema:
 }
 
 Rules:
-- experience: list all roles, most recent first
+- experience: list the 4 most recent roles only, most recent first
 - education: list all, most recent first
 - Keep descriptions concise but specific (mention key outputs, numbers, methods)
 - dates: use abbreviated month format: Jan. Feb. Mar. Apr. May Jun. Jul. Aug. Sep. Oct. Nov. Dec.
