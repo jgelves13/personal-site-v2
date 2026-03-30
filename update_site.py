@@ -65,10 +65,10 @@ Extract the following data and return ONLY valid JSON with this exact schema:
 
 {{
   "about": {{
-    "p1_en": "first about paragraph in English (2-3 sentences, background + focus)",
-    "p1_es": "primer párrafo en español",
-    "p2_en": "second about paragraph in English (recent work highlights)",
-    "p2_es": "segundo párrafo en español",
+    "p1_en": "Political scientist from Universidad de los Andes, with minors in Public Policy and Economics. My work focuses on AI governance, digital policy, and public sector transformation in Colombia and Latin America.",
+    "p1_es": "Politólogo de la Universidad de los Andes, con minors en Política Pública y Economía. Mi trabajo se enfoca en gobernanza de IA, política digital y transformación del sector público en Colombia y América Latina.",
+    "p2_en": "Most recently, I've advised on Colombia's digital government strategy for a MinTIC-funded initiative, co-authored a report on AI adoption by electoral authorities worldwide for the Registraduría Nacional, and contributed to the National AI Policy and Digital Poverty Index at the Departamento Nacional de Planeación.",
+    "p2_es": "Recientemente, asesoré la estrategia de gobierno digital de Colombia para una iniciativa del MinTIC, co-autoré un informe sobre el uso de IA en autoridades electorales para la Registraduría Nacional, y contribuí a la Política Nacional de IA y al Índice de Pobreza Digital en el DNP.",
     "p3_en": "I also build with AI agents. I use tools like Claude Code to turn research questions into working software.",
     "p3_es": "También construyo con agentes de IA. Uso herramientas como Claude Code para convertir preguntas de investigación en software funcional."
   }},
@@ -86,7 +86,7 @@ Extract the following data and return ONLY valid JSON with this exact schema:
 
 Rules:
 - experience: list the 4 most recent roles only, most recent first
-- p3_en and p3_es are fixed — always return exactly the values shown in the schema above, do not change them
+- p1, p2, p3 are all fixed — always return exactly the values shown in the schema above, do not change them
 - Keep descriptions concise but specific (mention key outputs, numbers, methods)
 - dates: use abbreviated month format: Jan. Feb. Mar. Apr. May Jun. Jul. Aug. Sep. Oct. Nov. Dec.
 - Do NOT wrap in markdown code fences — return raw JSON only
