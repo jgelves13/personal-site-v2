@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jose Gelves — Political Scientist · AI Safety · Builder</title>
+  <meta name="description" content="Jose Gelves Cabrera — Political Scientist, AI Safety researcher, and builder based in Bogotá."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Raleway:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ===== HEADER / NAV ===== -->
+<header>
+  <div class="nav-avatar" aria-label="Jose Gelves">JG</div>
+  <nav>
+    <a href="#about"    data-en="About"      data-es="Sobre mí">About</a>
+    <a href="#work"     data-en="Experience" data-es="Experiencia">Experience</a>
+    <a href="#education" data-en="Education" data-es="Educación">Education</a>
+    <a href="#projects" data-en="Projects"   data-es="Proyectos">Projects</a>
+    <a href="#writing"  data-en="Writing"    data-es="Escritura">Writing</a>
+    <a id="cvLink" href="assets/CV Jose Gelves (EN).pdf" target="_blank" data-en="CV" data-es="CV"
+       data-cv-en="assets/CV Jose Gelves (EN).pdf" data-cv-es="assets/CV Jose Gelves (ES).pdf">CV</a>
+    <button class="lang-btn" id="langToggle">EN | ES</button>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- mobile nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about"     data-en="About"      data-es="Sobre mí">About</a>
+  <a href="#work"      data-en="Experience" data-es="Experiencia">Experience</a>
+  <a href="#education" data-en="Education"  data-es="Educación">Education</a>
+  <a href="#projects"  data-en="Projects"   data-es="Proyectos">Projects</a>
+  <a href="#writing"   data-en="Writing"    data-es="Escritura">Writing</a>
+  <a id="cvLinkMob" href="assets/CV Jose Gelves (EN).pdf" target="_blank"
+     data-cv-en="assets/CV Jose Gelves (EN).pdf" data-cv-es="assets/CV Jose Gelves (ES).pdf">CV</a>
+  <button class="lang-btn-mob" id="langToggleMob">EN | ES</button>
+</div>
+
+<!-- ===== ORBIT HERO ===== -->
+<section class="hero" id="top">
+  <div class="orbit-container">
+    <div class="orbit-track"></div>
+    <div class="center-text">
+      <span class="bracket">{</span>
+      <span class="label"> jose_gelves </span>
+      <span class="bracket">}</span>
+    </div>
+
+    <div class="orbiter" style="animation-delay:0s">
+      <div class="orb-icon">🏛️</div><span class="orb-label">Governance</span>
+    </div>
+    <div class="orbiter" style="animation-delay:-1.875s">
+      <div class="orb-icon">🤖</div><span class="orb-label">AI Safety</span>
+    </div>
+    <div class="orbiter" style="animation-delay:-3.75s">
+      <div class="orb-icon">🌎</div><span class="orb-label">Colombia</span>
+    </div>
+    <div class="orbiter" style="animation-delay:-5.625s">
+      <div class="orb-icon">📊</div><span class="orb-label">Data Sci</span>
+    </div>
+    <div class="orbiter" style="animation-delay:-7.5s">
+      <div class="orb-icon">📜</div><span class="orb-label">Policy</span>
+    </div>
+    <div class="orbiter" style="animation-delay:-9.375s">
+      <div class="orb-icon">🔬</div><span class="orb-label">Research</span>
+    </div>
+    <div class="orbiter" style="animation-delay:-11.25s">
+      <div class="orb-icon">🛠️</div><span class="orb-label">Builder</span>
+    </div>
+    <div class="orbiter" style="animation-delay:-13.125s">
+      <div class="orb-icon" style="font-size:1.1rem;color:var(--accent);font-family:'Space Grotesk',sans-serif;font-weight:700;">✦</div><span class="orb-label">Agents</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="section-left">
+      <h2 class="section-heading reveal" data-en="About" data-es="Sobre mí">About</h2>
+    </div>
+    <div class="section-right">
+      <p class="body-text reveal"
+         data-en="Political scientist from Universidad de los Andes, with minors in Public Policy and Economics. My work focuses on AI governance, digital policy, and public sector transformation in Colombia and Latin America."
+         data-es="Politólogo de la Universidad de los Andes, con minors en Política Pública y Economía. Mi trabajo se enfoca en gobernanza de IA, política digital y transformación del sector público en Colombia y América Latina.">
+        Political scientist from Universidad de los Andes, with minors in Public Policy and Economics. My work focuses on AI governance, digital policy, and public sector transformation in Colombia and Latin America.
+      </p>
+
+      <p class="body-text reveal" style="margin-top:1.4rem"
+         data-en="Most recently, I've advised on Colombia's digital government strategy for a MinTIC-funded initiative, co-authored a report on AI adoption by electoral authorities worldwide for the Registraduría Nacional, and contributed to the National AI Policy and Digital Poverty Index at the Departamento Nacional de Planeación."
+         data-es="Recientemente, asesoré la estrategia de gobierno digital de Colombia para una iniciativa del MinTIC, co-autoré un informe sobre el uso de IA en autoridades electorales para la Registraduría Nacional, y contribuí a la Política Nacional de IA y al Índice de Pobreza Digital en el DNP.">
+        Most recently, I've advised on Colombia's digital government strategy for a MinTIC-funded initiative, co-authored a report on AI adoption by electoral authorities worldwide for the Registraduría Nacional, and contributed to the National AI Policy and Digital Poverty Index at the Departamento Nacional de Planeación.
+      </p>
+
+      <p class="body-text reveal" style="margin-top:1.4rem"
+         data-en="I also build with AI agents. I use tools like Claude Code to turn research questions into working software."
+         data-es="También construyo con agentes de IA. Uso herramientas como Claude Code para convertir preguntas de investigación en software funcional.">
+        I also build with AI agents. I use tools like Claude Code to turn research questions into working software.
+      </p>
+
+      <div class="tags reveal" style="margin-top:2rem">
+        <span class="tag">AI Governance</span>
+        <span class="tag">Political Science</span>
+        <span class="tag">Effective Altruism</span>
+        <span class="tag">Data Science</span>
+        <span class="tag">Colombia</span>
+      </div>
+
+      <div class="about-links reveal" style="margin-top:2.5rem">
+        <a id="cvDownload" href="assets/CV Jose Gelves (EN).pdf" target="_blank" class="text-link"
+           data-en="Download CV →" data-es="Descargar CV →"
+           data-cv-en="assets/CV Jose Gelves (EN).pdf" data-cv-es="assets/CV Jose Gelves (ES).pdf">Download CV →</a>
+        <a href="https://linkedin.com/in/josegelves" target="_blank" rel="noopener" class="text-link">LinkedIn ↗</a>
+        <a href="https://github.com/jgelves13" target="_blank" rel="noopener" class="text-link">GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== EXPERIENCE ===== -->
+<section class="section" id="work">
+  <div class="section-inner">
+    <div class="section-left">
+      <h2 class="section-heading reveal" data-en="Experience" data-es="Experiencia">Experience</h2>
+    </div>
+    <div class="section-right">
+
+      <!-- 1 -->
+      <div class="exp-item reveal">
+        <div class="exp-top">
+          <h3 class="exp-role" data-en="Research Consultant" data-es="Consultor de Investigación">Research Consultant</h3>
+          <span class="exp-date">Apr. 2025 – Present</span>
+        </div>
+        <p class="exp-org">Universidad de los Andes</p>
+        <p class="exp-desc"
+           data-en="Supporting a MinTIC-funded initiative to evaluate and plan Colombia's digital government strategy. Processing FURAG performance data and contributing to digital roadmaps and ICT policy guidelines."
+           data-es="Apoyo a una iniciativa del MinTIC para evaluar y planificar la estrategia de gobierno digital de Colombia. Procesamiento de datos FURAG y contribución a hojas de ruta digitales y lineamientos de política TIC.">
+          Supporting a MinTIC-funded initiative to evaluate and plan Colombia's digital government strategy. Processing FURAG performance data and contributing to digital roadmaps and ICT policy guidelines.
+        </p>
+      </div>
+
+      <!-- 2 -->
+      <div class="exp-item reveal">
+        <div class="exp-top">
+          <h3 class="exp-role" data-en="Research Consultant" data-es="Consultor de Investigación">Research Consultant</h3>
+          <span class="exp-date">Dec. 2025</span>
+        </div>
+        <p class="exp-org">Universidad de los Andes</p>
+        <p class="exp-desc"
+           data-en="Co-authored a research report for Colombia's electoral authority (Registraduría Nacional) examining how electoral bodies worldwide are adopting AI tools."
+           data-es="Co-autoría de un informe de investigación para la Registraduría Nacional examinando cómo los organismos electorales del mundo adoptan herramientas de IA.">
+          Co-authored a research report for Colombia's electoral authority (Registraduría Nacional) examining how electoral bodies worldwide are adopting AI tools.
+        </p>
+      </div>
+
+      <!-- 3 -->
+      <div class="exp-item reveal">
+        <div class="exp-top">
+          <h3 class="exp-role" data-en="Intern, Digital Development Directorate" data-es="Pasante, Dirección de Desarrollo Digital">Intern, Digital Development Directorate</h3>
+          <span class="exp-date">Feb. – Aug. 2025</span>
+        </div>
+        <p class="exp-org">Departamento Nacional de Planeación</p>
+        <p class="exp-desc"
+           data-en="Contributed to Colombia's Digital Poverty Index, Digital Education National Policy, and National AI Policy. Analyzed ICT datasets in R, conducted literature reviews, and developed a citizen AI training roadmap."
+           data-es="Contribuí al Índice de Pobreza Digital, la Política Nacional de Educación Digital y la Política Nacional de IA. Analicé datos TIC en R, realicé revisiones de literatura y desarrollé una hoja de ruta de formación ciudadana en IA.">
+          Contributed to Colombia's Digital Poverty Index, Digital Education National Policy, and National AI Policy. Analyzed ICT datasets in R, conducted literature reviews, and developed a citizen AI training roadmap.
+        </p>
+      </div>
+
+      <!-- 4 -->
+      <div class="exp-item reveal">
+        <div class="exp-top">
+          <h3 class="exp-role" data-en="Research Assistant" data-es="Asistente de Investigación">Research Assistant</h3>
+          <span class="exp-date">Feb. – Apr. 2025</span>
+        </div>
+        <p class="exp-org">Universidad de los Andes</p>
+        <p class="exp-desc"
+           data-en="Collaborated with Prof. Juan David Gutiérrez on a report examining how AI is transforming the Colombian labor market. Conducted 21 expert interviews and developed a global literature review on AI exposure."
+           data-es="Colaboré con el Prof. Juan David Gutiérrez en un informe sobre el impacto de la IA en el mercado laboral colombiano. Conduje 21 entrevistas con expertos y desarrollé una revisión global de literatura sobre exposición a la IA.">
+          Collaborated with Prof. Juan David Gutiérrez on a report examining how AI is transforming the Colombian labor market. Conducted 21 expert interviews and developed a global literature review on AI exposure.
+        </p>
+      </div>
+
+      <!-- 5 -->
+      <div class="exp-item reveal">
+        <div class="exp-top">
+          <h3 class="exp-role" data-en="Research Analyst" data-es="Analista de Investigación">Research Analyst</h3>
+          <span class="exp-date">Apr. – Jul. 2024</span>
+        </div>
+        <p class="exp-org">Carreras con Impacto</p>
+        <p class="exp-desc"
+           data-en="Evaluated the $2.6B U.S. NAIRR AI infrastructure initiative. Conducted comparative analysis of global AI computing initiatives and produced technical documentation and strategic recommendations."
+           data-es="Evalué la iniciativa NAIRR de infraestructura de IA de $2.6B en EE.UU. Análisis comparativo de iniciativas globales de cómputo para IA y producción de recomendaciones estratégicas.">
+          Evaluated the $2.6B U.S. NAIRR AI infrastructure initiative. Conducted comparative analysis of global AI computing initiatives and produced technical documentation and strategic recommendations.
+        </p>
+      </div>
+
+      <!-- 6 -->
+      <div class="exp-item reveal">
+        <div class="exp-top">
+          <h3 class="exp-role" data-en="Research Assistant" data-es="Asistente de Investigación">Research Assistant</h3>
+          <span class="exp-date">Dec. 2023 – Jan. 2024</span>
+        </div>
+        <p class="exp-org">University of Melbourne</p>
+        <p class="exp-desc"
+           data-en="Supported Dr. René Rejón's study on skin tone and legislative effectiveness in Mexico's Chamber of Deputies. Compiled comprehensive legislator profiles from official parliamentary sources."
+           data-es="Apoyo al estudio del Dr. René Rejón sobre tono de piel y efectividad legislativa en la Cámara de Diputados de México. Compilación de perfiles legislativos de fuentes parlamentarias oficiales.">
+          Supported Dr. René Rejón's study on skin tone and legislative effectiveness in Mexico's Chamber of Deputies. Compiled comprehensive legislator profiles from official parliamentary sources.
+        </p>
+      </div>
+
+      <!-- 7 -->
+      <div class="exp-item reveal">
+        <div class="exp-top">
+          <h3 class="exp-role" data-en="Research Assistant" data-es="Asistente de Investigación">Research Assistant</h3>
+          <span class="exp-date">Jun. – Aug. 2023</span>
+        </div>
+        <p class="exp-org">Texas A&amp;M University</p>
+        <p class="exp-desc"
+           data-en="Supported Manuela Muñoz's dissertation on local politics and public service provision in Colombia. Conducted interviews and surveys with 20 local legislators in Bogotá."
+           data-es="Apoyo a la tesis doctoral de Manuela Muñoz sobre política local y provisión de servicios en Colombia. Realicé entrevistas y encuestas con 20 legisladores locales en Bogotá.">
+          Supported Manuela Muñoz's dissertation on local politics and public service provision in Colombia. Conducted interviews and surveys with 20 local legislators in Bogotá.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== EDUCATION ===== -->
+<section class="section" id="education">
+  <div class="section-inner">
+    <div class="section-left">
+      <h2 class="section-heading reveal" data-en="Education" data-es="Educación">Education</h2>
+    </div>
+    <div class="section-right">
+
+      <div class="exp-item reveal">
+        <div class="exp-top">
+          <h3 class="exp-role">Universidad de los Andes</h3>
+          <span class="exp-date">Jan. 2021 – Jun. 2025</span>
+        </div>
+        <p class="exp-org"
+           data-en="B.A. Political Science · Minor in Public Policy &amp; Economics"
+           data-es="Pregrado en Ciencia Política · Minor en Política Pública y Economía">
+          B.A. Political Science · Minor in Public Policy &amp; Economics
+        </p>
+        <p class="exp-desc award-line"
+           data-en="Generación E Scholar (2021) — full merit-based scholarship"
+           data-es="Becario Generación E (2021) — beca completa por mérito académico">
+          Generación E Scholar (2021) — full merit-based scholarship
+        </p>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-top">
+          <h3 class="exp-role">Tecnológico de Monterrey</h3>
+          <span class="exp-date">2023</span>
+        </div>
+        <p class="exp-org"
+           data-en="International Exchange"
+           data-es="Intercambio Internacional">
+          International Exchange
+        </p>
+        <p class="exp-desc award-line"
+           data-en="Líderes del Mañana Scholar (2023) — full scholarship for outstanding students with high social impact"
+           data-es="Becario Líderes del Mañana (2023) — beca completa para estudiantes destacados con alto impacto social">
+          Líderes del Mañana Scholar (2023) — full scholarship for outstanding students with high social impact
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== PROJECTS ===== -->
+<section class="section" id="projects">
+  <div class="section-inner">
+    <div class="section-left">
+      <h2 class="section-heading reveal" data-en="Projects" data-es="Proyectos">Projects</h2>
+    </div>
+    <div class="section-right">
+      <div class="exp-item exp-placeholder reveal" style="border-bottom:none; padding-top:0;">
+        <p class="body-text" style="color:#aaa; font-size:1rem"
+           data-en="Coming soon."
+           data-es="Próximamente.">
+          Coming soon.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== WRITING ===== -->
+<section class="section" id="writing">
+  <div class="section-inner">
+    <div class="section-left">
+      <h2 class="section-heading reveal" data-en="Writing" data-es="Escritura">Writing</h2>
+    </div>
+    <div class="section-right">
+      <div class="exp-item exp-placeholder reveal" style="border-bottom:none; padding-top:0;">
+        <p class="body-text" style="color:#aaa; font-size:1rem"
+           data-en="Coming soon — subscribe on Substack."
+           data-es="Próximamente — suscríbete en Substack.">
+          Coming soon — subscribe on Substack.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <h3 class="footer-name">Jose Gelves</h3>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/josegelves" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/jgelves13" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="mailto:j.gelves@uniandes.edu.co">j.gelves@uniandes.edu.co</a>
+      <a id="cvDownloadFooter" href="assets/CV Jose Gelves (EN).pdf" target="_blank"
+         data-en="Download CV →" data-es="Descargar CV →"
+         data-cv-en="assets/CV Jose Gelves (EN).pdf" data-cv-es="assets/CV Jose Gelves (ES).pdf">Download CV →</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js?v=2"></script>
+</body>
+</html>
