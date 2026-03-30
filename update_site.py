@@ -34,12 +34,12 @@ def _ensure(pkg, import_name=None):
         subprocess.check_call([sys.executable, "-m", "pip", "install", pkg, "-q"])
 
 _ensure("pdfplumber")
-_ensure("google-genai", "google.genai")
+_ensure("google-generativeai", "google.generativeai")
 _ensure("beautifulsoup4", "bs4")
 _ensure("lxml")
 
 import pdfplumber
-from google import genai
+import google.generativeai as genai
 from bs4 import BeautifulSoup, NavigableString
 
 # ─── 1. download CVs ──────────────────────────────────────────────────────────
@@ -102,12 +102,12 @@ def extract_data(en_text: str, es_text: str) -> dict:
     if not api_key:
         sys.exit("ERROR: GEMINI_API_KEY not set. Export it or put it in a .env file.")
 
-    client = genai.Client(api_key=api_key)
+    genai.configure(api_key=api_key)
+    model = genai.GenerativeModel("gemini-1.5-flash")
     print("Calling Gemini API to parse CV data...")
     try:
-        response = client.models.generate_content(
-            model="gemini-1.5-flash",
-            contents=PROMPT.format(en_text=en_text[:12000], es_text=es_text[:12000]),
+        response = model.generate_content(
+            PROMPT.format(en_text=en_text[:12000], es_text=es_text[:12000])
         )
     except Exception as e:
         sys.exit(f"ERROR: Gemini API call failed: {e}")
