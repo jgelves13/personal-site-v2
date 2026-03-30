@@ -69,8 +69,8 @@ Extract the following data and return ONLY valid JSON with this exact schema:
     "p1_es": "primer párrafo en español",
     "p2_en": "second about paragraph in English (recent work highlights)",
     "p2_es": "segundo párrafo en español",
-    "p3_en": "third about paragraph in English (building with AI agents)",
-    "p3_es": "tercer párrafo en español"
+    "p3_en": "I also build with AI agents. I use tools like Claude Code to turn research questions into working software.",
+    "p3_es": "También construyo con agentes de IA. Uso herramientas como Claude Code para convertir preguntas de investigación en software funcional."
   }},
   "experience": [
     {{
@@ -86,6 +86,7 @@ Extract the following data and return ONLY valid JSON with this exact schema:
 
 Rules:
 - experience: list the 4 most recent roles only, most recent first
+- p3_en and p3_es are fixed — always return exactly the values shown in the schema above, do not change them
 - Keep descriptions concise but specific (mention key outputs, numbers, methods)
 - dates: use abbreviated month format: Jan. Feb. Mar. Apr. May Jun. Jul. Aug. Sep. Oct. Nov. Dec.
 - Do NOT wrap in markdown code fences — return raw JSON only
