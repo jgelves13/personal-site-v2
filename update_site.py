@@ -106,7 +106,7 @@ def extract_data(en_text: str, es_text: str) -> dict:
     print("Calling Gemini API to parse CV data...")
     try:
         response = client.models.generate_content(
-            model="gemini-2.0-flash-lite",
+            model="gemini-2.5-flash",
             contents=PROMPT.format(en_text=en_text[:12000], es_text=es_text[:12000]),
         )
     except Exception as e:
