@@ -21,7 +21,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install pdfplumber anthropic beautifulsoup4 lxml requests
+        run: pip install pdfplumber google-genai beautifulsoup4 lxml requests
 
       - name: Download CVs from Overleaf
         env:
@@ -30,7 +30,7 @@ jobs:
 
       - name: Update site HTML from CVs
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python update_site.py --no-dl
 
       - name: Commit and push if anything changed

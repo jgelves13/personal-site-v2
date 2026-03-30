@@ -34,12 +34,12 @@ def _ensure(pkg, import_name=None):
         subprocess.check_call([sys.executable, "-m", "pip", "install", pkg, "-q"])
 
 _ensure("pdfplumber")
-_ensure("anthropic")
+_ensure("google-genai", "google.genai")
 _ensure("beautifulsoup4", "bs4")
 _ensure("lxml")
 
 import pdfplumber
-import anthropic
+from google import genai
 from bs4 import BeautifulSoup, NavigableString
 
 # ─── 1. download CVs ──────────────────────────────────────────────────────────
@@ -109,21 +109,17 @@ Rules:
 """
 
 def extract_data(en_text: str, es_text: str) -> dict:
-    api_key = os.environ.get("ANTHROPIC_API_KEY") or _load_dotenv_key()
+    api_key = os.environ.get("GEMINI_API_KEY") or _load_dotenv_key()
     if not api_key:
-        sys.exit("ERROR: ANTHROPIC_API_KEY not set. Export it or put it in a .env file.")
+        sys.exit("ERROR: GEMINI_API_KEY not set. Export it or put it in a .env file.")
 
-    client = anthropic.Anthropic(api_key=api_key)
-    print("Calling Claude API to parse CV data...")
-    msg = client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=4096,
-        messages=[{
-            "role": "user",
-            "content": PROMPT.format(en_text=en_text[:12000], es_text=es_text[:12000])
-        }]
+    client = genai.Client(api_key=api_key)
+    print("Calling Gemini API to parse CV data...")
+    response = client.models.generate_content(
+        model="gemini-2.5-pro",
+        contents=PROMPT.format(en_text=en_text[:12000], es_text=es_text[:12000]),
     )
-    raw = msg.content[0].text.strip()
+    raw = response.text.strip()
     # strip markdown fences if present
     raw = re.sub(r"^```(?:json)?\s*", "", raw)
     raw = re.sub(r"\s*```$", "", raw)
@@ -133,7 +129,7 @@ def _load_dotenv_key():
     env = BASE / ".env"
     if env.exists():
         for line in env.read_text().splitlines():
-            if line.startswith("ANTHROPIC_API_KEY="):
+            if line.startswith("GEMINI_API_KEY="):
                 return line.split("=", 1)[1].strip().strip('"\'')
     return None
 
